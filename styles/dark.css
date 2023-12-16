@@ -16,9 +16,7 @@
   --decoration-color: #FF0070;
   --accent-text-color: #000028;
   --title-color: #DB00FF;
-}
 
-.page.theme_dark {
-  background: url(../images/cover-image-dark.png) center /cover no-repeat;
+	background: url(../images/cover-image-dark.png) center /cover no-repeat;
   background-attachment: fixed;
 }
