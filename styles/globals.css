@@ -10,6 +10,11 @@ body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;
+	color: var(--text-color);
+  font-family: var(--fonts, monospace);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
 }
 
 h1,
