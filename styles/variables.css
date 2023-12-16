@@ -4,16 +4,18 @@
 */
 
 :root {
-	--bg-color: #000028;
-  --text-color: #F1B2CE;
-  --accent-color: #FF0070;
-  --accent-bg-color: #FF0070;
-  --decoration-color: #FF0070;
+  --bg-color: #000028;
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --accent-bg-color: #ff0070;
+  --decoration-color: #ff0070;
   --accent-text-color: #000028;
-  --title-color: #DB00FF;
-  --fonts: 'IBM Plex mono', monospace;
+  --title-color: #db00ff;
+  --opacity-accent-color: rgba(255, 0, 112, 0.5);
+  --fonts: "IBM Plex mono", monospace;
   --fs-normal: 18px;
   --lh-normal: 130%;
   --fw-normal: 400;
   --fw-bold: 700;
+  --bg-image: url(../images/cover-image-dark.png);
 }

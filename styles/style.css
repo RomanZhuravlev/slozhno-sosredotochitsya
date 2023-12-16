@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-	background: url(../images/cover-image-dark.png) center /cover no-repeat;
+  background: var(--bg-image) center / cover no-repeat;
   background-color: var(--bg-color);
   background-attachment: fixed;
 }
@@ -12,13 +12,13 @@
   z-index: 0;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-	padding: 20px;
-	width: 100%;
-	height: 100vh;
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
 }
 
 .dark-decoration-element {
-	position: absolute;
+  position: absolute;
   top: 20px;
   right: 47px;
   color: var(--decoration-color);
@@ -26,21 +26,21 @@
 }
 
 .dark-decoration-element::after {
-	content: '';
+  content: "";
   position: absolute;
-	width: 9px;
+  width: 9px;
   height: 9px;
   top: 8px;
   right: -18px;
   border-radius: 50%;
-  fill: #FF0070;
+  fill: #ff0070;
   background-color: var(--accent-bg-color);
-  filter: drop-shadow(0px 0px 4px #FF0070);
-	z-index: 1;
+  filter: drop-shadow(0px 0px 4px #ff0070);
+  z-index: 1;
 }
 
 .decorated-zone::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 20px;
   right: 20px;
@@ -51,7 +51,7 @@
 }
 
 .decorated-zone::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -67,7 +67,7 @@
 
 .header__theme-menu-list {
   display: grid;
-	grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid currentColor;
+  outline: 1px solid var(--opacity-accent-color);
   cursor: pointer;
 }
 
@@ -112,7 +112,7 @@
 }
 
 .header__paragraph {
-	justify-self: end;
+  justify-self: end;
   width: max(355px, 50%);
   height: fit-content;
   margin-block-start: 6%;
@@ -122,19 +122,19 @@
 }
 
 .main {
-	margin-block-start: 60px;
-	padding: 0px 20px;
+  margin-block-start: 60px;
+  padding: 0px 20px;
   display: grid;
   gap: 80px;
 }
 
 .article {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.article:nth-child(even) {
+.accent_article {
   display: flex;
   flex-direction: column;
 }
@@ -145,9 +145,9 @@
   gap: 20px;
 }
 
-.article:nth-child(even) .article__paragraph-list {
+.accent_article .article__paragraph-list {
   display: grid;
-	grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .article__title {
@@ -164,8 +164,12 @@
   font-weight: var(--fw-normal);
 }
 
+.accent_title_width {
+  width: 30%;
+}
+
 .article__subtitle {
-	margin-block-end: 10px;
+  margin-block-end: 10px;
   height: fit-content;
   color: var(--accent-text-color);
   font-size: inherit;
@@ -173,11 +177,11 @@
 }
 
 .gallery .article__subtitle {
-	margin-block-end: 0;
+  margin-block-end: 0;
 }
 
 .extra-subtitle {
-	margin-block-end: 20px;
+  margin-block-end: 20px;
 }
 
 .paragraph_link {
@@ -199,7 +203,6 @@
   display: grid;
   gap: 20px;
   padding-block-start: 20px;
-
 }
 
 .pictures_image {
@@ -231,31 +234,29 @@
 
 .footer {
   position: relative;
-	margin-block-start: 60px;
+  margin-block-start: 60px;
   display: grid;
   align-content: center;
   min-width: 375px;
   min-height: 667px;
   text-align: center;
-	width: 100%;
-	height: 100vh;
-	padding: 20px;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
 }
 
 /* mobile version */
 @media (min-width: 375px) and (width < 768px) {
-	.header {
-		padding: 10px;
-		height: 100vh;
-	}
+  .header {
+    padding: 10px;
+  }
 
-	.footer {
-		padding: 10px;
-		height: 100vh;
-		margin-block-start: 40px;
-	}
+  .footer {
+    padding: 10px;
+    margin-block-start: 40px;
+  }
 
-	.decorated-zone::before {
+  .decorated-zone::before {
     top: 10px;
     right: 10px;
   }
@@ -265,53 +266,53 @@
     left: 10px;
   }
 
-	.dark-decoration-element {
-		top: 10px;
+  .dark-decoration-element {
+    top: 10px;
     right: 37px;
-	}
+  }
 
-	.title {
+  .title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-	.header__theme-menu {
-		justify-self: end;
-	}
+  .header__theme-menu {
+    justify-self: end;
+  }
 
-	.header__theme-menu-list {
-		display: flex;
-		flex-direction: column;
-		margin-block-start: 62px;
-		margin-block-end: 65px;
-	}
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 62px;
+    margin-block-end: 65px;
+  }
 
-	.header__paragraph {
-		margin-block-start: 55px;
-		margin-block-end: 66px;
-	}
+  .header__paragraph {
+    margin-block-start: 55px;
+    margin-block-end: 66px;
+  }
 
-	.header__title {
+  .header__title {
     margin-inline-start: 0;
   }
 
-	.main {
+  .main {
     display: grid;
     gap: 50px;
-		margin-block-start: 40px;
-		padding: 0 10px;
+    margin-block-start: 40px;
+    padding: 0 10px;
   }
 
-	.article {
-		display: flex;
-		flex-direction: column;
-	}
+  .article {
+    display: flex;
+    flex-direction: column;
+  }
 
-	.article:nth-child(even) .article__paragraph-list {
-		display: flex;
-		flex-direction: column;
-	}
+  .accent_article .article__paragraph-list {
+    display: flex;
+    flex-direction: column;
+  }
 
-	.picture {
+  .picture {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -321,30 +322,30 @@
 
 /* tablet version  */
 @media (min-width: 768px) and (width < 1024px) {
-	.header__theme-menu-list {
-		display: flex;
-		flex-direction: column;
-		margin-block-start: 170px;
-	}
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 170px;
+  }
 
-	.header__theme-menu {
-		justify-self: end;
-	}
+  .header__theme-menu {
+    justify-self: end;
+  }
 
-	.article:nth-child(even) .article__paragraph-list {
-		display: flex;
-		flex-direction: column;
-	}
+  .accent_article .article__paragraph-list {
+    display: flex;
+    flex-direction: column;
+  }
 
-	.accent_title_width {
-		width: 20%;
-	}
+  .accent_title_width {
+    width: 20%;
+  }
 
-	.article__text {
-		width: 99%;
-	}
+  .article__text {
+    width: 99%;
+  }
 
-	.article:nth-child(even) .article__text {
-		width: 100%;
-	}
+  .accent_article .article__text {
+    width: 100%;
+  }
 }
