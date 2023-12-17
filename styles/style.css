@@ -312,9 +312,9 @@
     flex-direction: column;
   }
 
-	.accent_title_width {
-		width: 100%;
-	}
+  .accent_title_width {
+    width: 100%;
+  }
 
   .picture {
     display: flex;
